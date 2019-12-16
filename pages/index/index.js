@@ -158,5 +158,8 @@ Page({
       hasUserInfo: true
     })
     
+  },
+  onShow:function(){
+    this.onLoad();
   }
 })

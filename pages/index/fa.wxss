@@ -2,18 +2,18 @@
   height: 200rpx;
   width: 80%;
   margin-left: 10%;
-  background: gainsboro;
+  /* background: gainsboro; */
   margin-top: 40rpx;
 }
 view,input {
-  width: 80%;
+  /* width: 80%;
+  margin-left: 10%;
+    margin-top: 40rpx; */
+}
+/* radio{
   margin-left: 10%;
     margin-top: 40rpx;
-}
-radio{
-  margin-left: 10%;
-    margin-top: 40rpx;
-}
+} */
 .gongneng{
   display: flex;
   flex-direction: row;
@@ -22,8 +22,8 @@ radio{
 }
 button{
   background: greenyellow;
-    margin-top: 10rpx;
-    width: 40%;
+    /* margin-top: 10rpx;
+    width: 40%; */
 }
 image{
   width: 500rpx;

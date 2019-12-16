@@ -6,9 +6,9 @@
   margin-top: 40rpx;
 }
 view,input {
-  width: 80%;
+  /* width: 80%;
   margin-left: 10%;
-    margin-top: 40rpx;
+    margin-top: 40rpx; */
 }
 radio{
   margin-left: 10%;

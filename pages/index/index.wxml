@@ -1,8 +1,16 @@
 <!-- index.wxml-->
-<view class='sousuo'>
+
+<view class="cu-bar bg-white search">
+  <view class="search-form round">
+    <text class="cuIcon-search"></text>
+    <input type="text" bindinput='biaoti' placeholder="搜素关键词" confirm-type="gogo"></input>
+  </view>  <button bindtap='gogo' class='ss'>搜索</button>
+</view>
+
+<!-- <view class='sousuo'>
   <input class='search' bindinput='biaoti' placeholder="搜素关键词"></input>
   <button bindtap='gogo' class='ss'>搜索</button>
-</view>
+</view> -->
 
 
 <view class='hot'>

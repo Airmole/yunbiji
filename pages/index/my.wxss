@@ -20,8 +20,8 @@
   margin-top: 100px;
 }
 .search{
-  margin-top: 50rpx;
-  width:80%;
+  /* margin-top: 50rpx;
+  width:80%; */
   height: 50rpx;
   text-align: center;
 }
@@ -99,7 +99,7 @@ span{
   width: 20%;
   height: 50rpx;
   font-size: 30rpx;
-  margin-top: 50rpx;
+  /* margin-top: 50rpx; */
   line-height: 50rpx;
 }
 view{

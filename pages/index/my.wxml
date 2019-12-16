@@ -1,18 +1,29 @@
 <!--index.wxml-->
-<view class='sousuo'><input class='search'  bindinput='biaoti'    placeholder="搜素关键词"></input><button bindtap='gogo' class='ss'>搜索</button></view>
 
-<view class='hot'> 
+
+<view class="cu-bar bg-white search">
+  <view class="search-form round">
+    <text class="cuIcon-search"></text>
+    <input type="text" bindinput='biaoti' placeholder="搜素关键词"></input>
+  </view>
+  <button bindtap='gogo' class='ss'>搜索</button>
+</view>
+
+
+
+<view class='hot'>
 </view>
 
 <block wx:for='{{list}}'>
-<view class='tiao' bindtap='go' data-id="{{item.Id}}">
-<view>题目:{{item.title}}</view>     <view class='t'>时间:{{item.createtime}}
-<block wx:if="{{item.type==0}}">
-  (公有)
-</block>
-<block wx:if="{{item.type==1}}">
-  (私有)
-</block>
+  <view class='tiao' bindtap='go' data-id="{{item.Id}}">
+    <view>题目:{{item.title}}</view>
+    <view class='t'>时间:{{item.createtime}}
+      <block wx:if="{{item.type==0}}">
+        (公有)
+      </block>
+      <block wx:if="{{item.type==1}}">
+        (私有)
+      </block>
 
 
 
@@ -20,11 +31,10 @@
 
 
 
-</view>
+    </view>
 
-</view>
-<view  class='nei'>{{item.content}}</view>
+  </view>
+  <view class='nei'>{{item.content}}</view>
 
 </block>
 <view style='height:200rpx;width:100%'></view>
-
