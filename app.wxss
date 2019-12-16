@@ -1,0 +1,28 @@
+/**app.wxss**/
+@import "colorui/main.wxss";
+@import "colorui/icon.wxss";
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+} 
+.footer{
+  position: fixed;
+  background: gainsboro;
+  bottom: 0rpx;
+width: 100%;
+ display:flex;
+flex-direction: row;
+text-align:center;
+}
+.footer view{
+  width: 25%;
+  height: 100rpx;
+  font-size: 30rpx;
+  line-height: 100rpx;
+  border: 1rpx solid ghostwhite;
+}

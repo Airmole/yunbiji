@@ -1,0 +1,10 @@
+<view> 标题：{{list.title}}<span bindtap='xihuan' class='xihuan'>收藏({{list.xihuan}})</span></view>
+<view> tag:{{list.tag}}</view>
+<view> 作者:{{list.nick}}</view>
+
+<view>{{list.content}}</view>
+<block wx:for="{{image}}">
+<image src='{{root}}{{item}}'></image>
+
+</block>
+

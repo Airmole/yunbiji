@@ -1,0 +1,19 @@
+<!--index.wxml-->
+
+
+
+
+<block wx:for='{{list}}'>
+<view class='tiezi' data-id='{{item.Id}}' bindtap='go'>
+<view class='tiezia'>
+
+ <view class='nick'>{{item.title}}</view>
+ <view class='time'>{{item.createtime}}</view>
+</view>
+</view>
+
+
+</block>
+<view style='height:200rpx;width:100%'></view>
+
+<include src="footer.wxml" />

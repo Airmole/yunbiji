@@ -1,0 +1,11 @@
+.timer{
+  color:red;
+  position: fixed;
+  height: 100rpx;
+  background: white;
+  z-index: 11;
+  top:0rpx;
+}
+.xzt{
+  margin-top: 100rpx;
+}

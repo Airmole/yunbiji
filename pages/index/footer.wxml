@@ -1,0 +1,6 @@
+<view class='footer'>
+<view bindtap='index'>首页</view>
+<view bindtap='my'>我的笔记</view>
+<view bindtap='fa'>随手一记</view>
+<view bindtap='user'>个人中心</view>
+</view>

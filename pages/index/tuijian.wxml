@@ -1,0 +1,16 @@
+<!--index.wxml-->
+
+
+<view class='hot'> 
+</view>
+
+<block wx:for='{{list}}'>
+<view class='tiao' bindtap='go' data-id="{{item.Id}}">
+<view>题目:{{item.title}}</view>     <view>时间:{{item.createtime}}</view>
+
+</view>
+
+
+</block>
+<view style='height:200rpx;width:100%'></view>
+

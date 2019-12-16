@@ -1,0 +1,17 @@
+<view class='timer'>当前剩余时间：{{timer}}分钟</view>
+
+<view class='xzt'>选择题共({{xl}})题</view>
+<block wx:for='{{xuanze}}'  wx:for-index="idx">
+<view class='timu'>第{{idx+1}}题:{{item.question}}</view>
+<view class='A' style='background:{{xcolor[idx][0]}}'  bindtap='xuanze'  data-id='{{idx}}' data-case='A'>A;{{item.A}}</view>
+<view class='B'  style='background:{{xcolor[idx][1]}}'  bindtap='xuanze'  data-id='{{idx}}' data-case='B'>B:{{item.B}}</view>
+<view class='C'  style='background:{{xcolor[idx][2]}}' bindtap='xuanze'  data-id='{{idx}}' data-case='C'>C:{{item.C}}</view>
+<view class='D'  style='background:{{xcolor[idx][3]}}'bindtap='xuanze'  data-id='{{idx}}' data-case='D'>D:{{item.D}}</view>
+
+</block>
+<view>天空题共({{tl}})题</view>
+<block wx:for='{{tiankong}}'  wx:for-index="idx">
+<view class='timu'>第{{idx+1}}题:{{item.question}}</view>
+<view  style='background:{{tcolor[idx]}}' ><input data-id='{{idx}}'  placeholder="在此输入答案" bindinput='input'></input></view>
+</block>
+<button bindtap='tijiao'>提交答案</button>

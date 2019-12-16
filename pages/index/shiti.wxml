@@ -1,0 +1,12 @@
+<view>选择试题类型</view>
+<block wx:for='{{list}}'>
+<view class='da' data-id='{{item.Id}}' bindtap='go'>
+<view class='a'>{{item.name}}</view>
+<view class='b'>选择题：{{item.xuanze}}+填空题:{{item.tiankong}}(时长{{item.shichang}}分钟)</view>
+</view>
+
+
+
+
+
+</block>

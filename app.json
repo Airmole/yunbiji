@@ -1,0 +1,65 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/index/shiti",
+    "pages/index/dati",
+    "pages/index/user",
+    "pages/index/fa",
+    "pages/index/view",
+    "pages/kan/user",
+    "pages/index/my",
+    "pages/my/view",
+    "pages/index/tuijian"
+  ],
+  "plugins": {
+    "WechatSI": {
+      "version": "0.0.7",
+      "provider": "wx069ba97219f66d99"
+    }
+  },
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "随手记",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#a9b7b7",
+    "selectedColor": "#11cd6e",
+    "borderStyle": "white",
+    "font-size": "120rpx",
+    "list": [
+      {
+        "selectedIconPath": "pages/images/1.png",
+        "iconPath": "pages/images/1.png",
+        "pagePath": "pages/index/index",
+        "text": "首页"
+      },
+      {
+        "selectedIconPath": "pages/images/2.png",
+        "iconPath": "pages/images/2.png",
+        "pagePath": "pages/index/my",
+        "text": "我的笔记"
+      },
+      {
+        "selectedIconPath": "pages/images/2.png",
+        "iconPath": "pages/images/2.png",
+        "pagePath": "pages/index/tuijian",
+        "text": "推荐"
+      },
+      {
+        "selectedIconPath": "pages/images/3.png",
+        "iconPath": "pages/images/3.png",
+        "pagePath": "pages/index/fa",
+        "text": "随手一记"
+      },
+      {
+        "selectedIconPath": "pages/images/4.png",
+        "iconPath": "pages/images/4.png",
+        "pagePath": "pages/index/user",
+        "text": "个人中心"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

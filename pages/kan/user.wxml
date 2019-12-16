@@ -1,0 +1,18 @@
+<view class="userinfo">
+
+  <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatar_image}}" mode="cover"></image>
+  <text class="userinfo-nickname">{{userInfo.nickname}}</text>
+</view>
+<view class='liangkuai'>
+<view class='a'>
+<view></view>
+<view></view>
+</view>
+<view class='a' bindtap='guanzhu' data-openid="{{userInfo.openid}}">
+<view>{{userInfo.guanzhu}}</view>
+<view>关注</view>
+</view>
+</view>
+<view class='tiao' bindtap='my'>他的帖子<span>></span></view>
+<view class='tiao'  bindtap='xihuan'>他的收藏<span>></span></view>
+<include src="footer.wxml" />

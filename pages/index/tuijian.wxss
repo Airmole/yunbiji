@@ -1,0 +1,97 @@
+/**index.wxss**/
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #aaa;
+}
+
+.usermotto {
+  margin-top: 100px;
+}
+.search{
+  margin-top: 50rpx;
+  width:80%;
+  height: 50rpx;
+  text-align: center;
+}
+.hot{
+  margin-top: 50rpx;
+  display: flex;
+  flex-direction: row;
+  background: #eaf0f6;
+  height: 60rpx;
+
+}
+.hot view{
+  line-height: 60rpx;
+  font-size: 40rpx;
+  text-align: center;
+  width: 20%;
+}
+.tiezi{
+  
+  margin-top: 10rpx;
+  
+}
+.tiao{
+  height: 80rpx;
+  display: flex;
+  flex-direction: row;
+  font-size: 30rpx;
+  line-height: 80rpx;
+  justify-content: space-around;
+  background: gainsboro;
+  margin-top: 10rpx;
+
+}
+.tiezic{
+  height: 50rpx;
+  margin-top: 20rpx;
+  font-size: 20rpx;
+  color:gray;
+  margin-left: 50rpx;
+}
+.tiezib{
+  height: 50rpx;
+  margin-left: 50rpx;
+}
+.img{
+  height: 50rpx;
+  margin-left: 50rpx;
+  margin-right: 20rpx;
+  margin-top: 15rpx;
+  
+  width: 50rpx;
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  background-size:100% 100%;
+}
+span{
+  margin-left: 450rpx;
+  color:red;
+}
+.time{
+  margin-left: 100rpx;
+}
+.sousuo{
+  display: flex;
+  flex-direction: row;
+}
+.ss{
+  width: 20%;
+  height: 50rpx;
+  font-size: 30rpx;
+  margin-top: 50rpx;
+  line-height: 50rpx;
+}

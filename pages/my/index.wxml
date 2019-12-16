@@ -1,0 +1,22 @@
+<!--index.wxml-->
+
+
+
+
+<block wx:for='{{list}}'>
+<view class='tiezi' data-id='{{item.Id}}' bindtap='go'>
+<view class='tiezia'>
+ <view class='img' style='background-image:url("{{item.avr}}")'></view>
+ <view class='nick'>{{item.nick}}</view>
+ <view class='time'>{{item.createtime}}</view>
+</view>
+<view class='tiezib'>{{item.neirong}}</view>
+<view class='tiezic'><block wx:if="{{item.type==1}}">杂谈</block><block wx:if="{{item.type==0}}">提问</block><span>回复：{{item.num}}</span></view>
+</view>
+
+
+
+</block>
+<view style='height:200rpx;width:100%'></view>
+
+<include src="footer.wxml" />

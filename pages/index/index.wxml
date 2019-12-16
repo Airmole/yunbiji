@@ -1,0 +1,46 @@
+<!-- index.wxml-->
+<view class='sousuo'>
+  <input class='search' bindinput='biaoti' placeholder="搜素关键词"></input>
+  <button bindtap='gogo' class='ss'>搜索</button>
+</view>
+
+
+<view class='hot'>
+</view>
+<view class="userinfo">
+  <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取授权 </button>
+  <block wx:else>
+  </block>
+</view>
+
+
+<view class="cu-list menu">
+  <view class="cu-item" wx:for='{{list}}' bindtap='go' data-id="{{item.Id}}">
+    <view class="content padding-tb-sm">
+      <view>
+        <text class="cuIcon-comment text-blue margin-right-xs"></text> 题目:{{item.title}}</view>
+      <view class="text-gray text-sm">
+        <text class="cuIcon-infofill margin-right-xs"></text> {{item.content}} </view>
+    </view>
+    <view class="action">
+      时间:{{item.createtime}}
+    </view>
+  </view>
+</view>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<view style='height:200rpx;width:100%'></view>

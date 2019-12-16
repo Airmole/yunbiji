@@ -1,0 +1,27 @@
+  <view> 标题</view>
+  <input bindinput="title" placeholder="输入标题" />
+  <input bindinput="tag" placeholder="tag" />
+  <radio-group class="radio-group" bindchange="radioChange">
+  <label class="radio" wx:for="{{items}}">
+    <radio value="{{item.name}}" checked="{{item.checked}}" />
+    {{item.value}}
+  </label>
+</radio-group>
+<view class='shuru'>
+ <view class='imga'> 内容</view>
+ <image class='img' bindtouchstart="luyin" 
+bindtouchend="jieshu"  src="../images/timg.jpg"></image>
+ </view>
+  <textarea bindinput="neirong" class='neirong' placeholder="在此输入内容"  value='{{neirong}}'></textarea> 
+ <block wx:if="{{image != 1}}">
+ <view class='tu'>
+ <block wx:for="{{image}}">
+ <image src='{{root}}{{item}}'></image>
+ </block>
+ </view>
+ </block>
+
+
+
+ <view class='gongneng'> <button  bindtap='choice'>插入图片</button>
+  <button  bindtap='fatie'>发帖</button></view>
