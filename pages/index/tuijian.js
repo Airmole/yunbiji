@@ -67,7 +67,7 @@ Page({
     })
   },
   onLoad: function () {
-    this.tuijian()
+    // this.tuijian()
   },
 
 

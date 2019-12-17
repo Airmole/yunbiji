@@ -1,37 +1,53 @@
-  <view> 标题</view>
-  <input bindinput="title" placeholder="输入标题"  value="{{list.title}}"/>
-  <input bindinput="tag" placeholder="tag"  value="{{list.tag}}"/>
-  <radio-group class="radio-group" bindchange="radioChange">
-  <block wx:if="{{list.type==0}}">
-  <label class="radio" wx:for="{{items}}">
-  <radio value="{{item.name}}" checked="{{item.checked}}" />
-    {{item.value}}
-  </label>
-  </block>
-   <block wx:if="{{list.type == 1}}">
-   <label class="radio" wx:for="{{itemsa}}">
-   <radio value="{{item.name}}" checked="{{item.checked}}" />
-    {{item.value}}
-  </label>
-  </block>
-  
-    
-</radio-group>
-<view class='shuru'>
- <view class='imga'> 内容</view>
- <image class='img' bindtouchstart="luyin" 
-bindtouchend="jieshu"  src="../images/timg.jpg"></image>
- </view>
-  <textarea bindinput="neirong" class='neirong' placeholder="在此输入内容"  value='{{neirong}}'></textarea> 
- <block wx:if="{{image != 1}}">
-
- <block wx:for='{{image}}'>
- <image src='{{root}}{{item}}'></image>
- </block>
- </block>
-
- <view class='gongneng'> <button  bindtap='choice'>插入图片</button>
-  <button  bindtap='fatie'>更改</button>
-  <button  bindtap='shanchu'>删除</button>
-  
+<view class="cu-form-group margin-top">
+  <view class="title">标题</view>
+  <input bindinput="title" placeholder="输入标题" value="{{list.title}}"></input>
+</view>
+<view class="cu-form-group margin-top">
+  <view class="title">标签</view>
+  <input bindinput="tag" placeholder="tag" value="{{list.tag}}"></input>
+</view>
+<view class="cu-form-group">
+  <view class="title">类型</view>
+  <view>
+    <radio-group class="radio-group" bindchange="radioChange">
+      <block wx:if="{{list.type==0}}">
+        <label class="radio" wx:for="{{items}}">
+          <radio value="{{item.name}}" checked="{{item.checked}}" class="blue radio" /> {{item.value}}
+        </label>
+      </block>
+      <block wx:if="{{list.type == 1}}">
+        <label class="radio" wx:for="{{itemsa}}">
+          <radio value="{{item.name}}" checked="{{item.checked}}" class="blue radio" />{{item.value}}
+        </label>
+      </block>
+    </radio-group>
   </view>
+</view>
+<view class="cu-form-group">
+  <view class="title">内容</view>
+  <text class="cuIcon-voicefill text-orange" bindtouchstart="luyin" bindtouchend="jieshu"></text>
+</view>
+<view class="cu-form-group align-start">
+  <view class="title">文本框</view>
+  <textarea bindinput="neirong" class='neirong' placeholder="在此输入内容" value='{{neirong}}'>
+  </textarea>
+</view>
+<view class="grid flex-sub padding-lr col-3 grid-square">
+  <block wx:if="{{image != 1}}">
+    <block wx:for="{{image}}">
+      <image class="bg-img" src='{{root}}{{item}}'></image>
+    </block>
+  </block>
+</view>
+<view class="flex" style="flex-direction: row;">
+  <view class="flex-sub padding-sm margin-xs radius">
+    <button class="cu-btn bg-cyan margin-tb-sm lg" style="width:100%;" bindtap='choice'>
+      <text class="cuIcon-upload line-white"></text> 图片</button>
+  </view>
+  <view class="flex-sub padding-sm margin-xs radius">
+    <button class="cu-btn bg-green margin-tb-sm lg" style="width:100%;" bindtap='fatie'>更改</button>
+  </view>
+  <view class="flex-sub padding-sm margin-xs radius">
+    <button class="cu-btn bg-green margin-tb-sm lg" style="width:100%;" bindtap='shanchu'>删除</button>
+  </view>
+</view>

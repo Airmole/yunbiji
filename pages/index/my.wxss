@@ -103,7 +103,7 @@ span{
   line-height: 50rpx;
 }
 view{
- padding-left: 50rpx;
+ /* padding-left: 50rpx; */
 }
 .t{
   position: absolute;

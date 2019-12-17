@@ -16,9 +16,10 @@ Component({
     })
     let i = 0;
     numDH();
+
     function numDH() {
       if (i < 20) {
-        setTimeout(function () {
+        setTimeout(function() {
           that.setData({
             starCount: i,
             forksCount: i,
@@ -74,5 +75,10 @@ Component({
         current: 'https://image.weilanwl.com/color2.0/zanCode.jpg' // 当前显示图片的http链接      
       })
     },
-  }
+    xihuan: function() {
+      wx.navigateTo({
+        url: '/pages/xihuan/index',
+      })
+    },
+  },
 })

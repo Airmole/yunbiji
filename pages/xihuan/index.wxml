@@ -1,19 +1,28 @@
 <!--index.wxml-->
-
-
-
-
-<block wx:for='{{list}}'>
-<view class='tiezi' data-id='{{item.Id}}' bindtap='go'>
-<view class='tiezia'>
-
- <view class='nick'>{{item.title}}</view>
- <view class='time'>{{item.createtime}}</view>
-</view>
-</view>
-
-
+<!-- <block wx:for='{{list}}'>
+  <view class='tiezi' data-id='{{item.Id}}' bindtap='go'>
+    <view class='tiezia'>
+      <view class='nick'>{{item.title}}</view>
+      <view class='time'>{{item.createtime}}</view>
+    </view>
+  </view>
 </block>
 <view style='height:200rpx;width:100%'></view>
+<include src="footer.wxml" /> -->
 
-<include src="footer.wxml" />
+
+
+
+<view class="cu-list menu">
+  <block wx:for='{{list}}'>
+    <view class="cu-item arrow"  data-id='{{item.Id}}' bindtap='go'>
+      <view class="content">
+        <text class="cuIcon-likefill text-red"></text>
+        <text class="text-grey">{{item.title}}</text>
+      </view>
+      <view class="action">
+        <text class="text-grey">{{item.createtime}}</text>
+      </view>
+    </view>
+  </block>
+</view>

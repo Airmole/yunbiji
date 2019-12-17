@@ -4,7 +4,8 @@
   <view class="search-form round">
     <text class="cuIcon-search"></text>
     <input type="text" bindinput='biaoti' placeholder="搜素关键词" confirm-type="gogo"></input>
-  </view>  <button bindtap='gogo' class='ss'>搜索</button>
+  </view>
+  <button bindtap='gogo' class='ss'>搜索</button>
 </view>
 
 <!-- <view class='sousuo'>
@@ -26,12 +27,12 @@
   <view class="cu-item" wx:for='{{list}}' bindtap='go' data-id="{{item.Id}}">
     <view class="content padding-tb-sm">
       <view>
-        <text class="cuIcon-comment text-blue margin-right-xs"></text> 题目:{{item.title}}</view>
+        <text class="cuIcon-comment text-blue margin-right-xs"></text> {{item.title}}</view>
       <view class="text-gray text-sm">
         <text class="cuIcon-infofill margin-right-xs"></text> {{item.content}} </view>
     </view>
     <view class="action">
-      时间:{{item.createtime}}
+      {{item.createtime}}
     </view>
   </view>
 </view>

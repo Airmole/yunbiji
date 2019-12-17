@@ -9,17 +9,17 @@ Page({
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo')
   },
- 
-  biaoti:function(e){
+
+  biaoti: function(e) {
     console.log(e.detail.value)
     this.setData({
-   
+
       biaoti: e.detail.value
     })
   },
 
-  tuijian:function(){
-    var that=this
+  tuijian: function() {
+    var that = this
     wx.request({
       header: {
         'Cookie': 'PHPSESSID=' + getApp().globalData.pid
@@ -28,32 +28,32 @@ Page({
       data: {
         userinfo: getApp().globalData.userInfo
       },
-      success: function (res) {     //获取各个权限
+      success: function(res) { //获取各个权限
 
-        if(res.data.length==0)
-        {
+        if (res.data.length == 0) {
           wx.showToast({
             title: '暂无推荐',
           })
-       
-        }
-        else{
+
+        } else {
           that.setData({
-            list:res.data
+            list: res.data
           })
         }
       }
     })
-  
+
   },
 
 
-  gogo:function(){
-    var that=this
+  gogo: function() {
+    var that = this
     wx.request({
       url: getApp().globalData.url + 'index/tiezia',
-      data:({key:this.data.biaoti}),
-      success: function (res) {
+      data: ({
+        key: this.data.biaoti
+      }),
+      success: function(res) {
         that.setData({
           list: res.data
         })
@@ -67,13 +67,13 @@ Page({
       url: '../logs/logs'
     })
   },
-  onLoad: function () {
+  onLoad: function() {
     if (app.globalData.userInfo) {
       this.setData({
         userInfo: app.globalData.userInfo,
         hasUserInfo: true
       })
-    } else if (this.data.canIUse){
+    } else if (this.data.canIUse) {
       // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
       // 所以此处加入 callback 以防止这种情况
       app.userInfoReadyCallback = res => {
@@ -94,16 +94,16 @@ Page({
         }
       })
     }
-   
-    var that=this
-   wx.request({
-     url: getApp().globalData.url + 'index/tiezi?cha=1',
-     success:function(res){
-      that.setData({
-        list:res.data
-      })
-     }
-   })
+
+    var that = this
+    wx.request({
+      url: getApp().globalData.url + 'index/tiezi?cha=1',
+      success: function(res) {
+        that.setData({
+          list: res.data
+        })
+      }
+    })
 
     function show() {
       wx.request({
@@ -114,52 +114,62 @@ Page({
         data: {
           userinfo: getApp().globalData.userInfo
         },
-        success: function (res) {     //获取各个权限
+        success: function(res) { //获取各个权限
 
-         console.log(res)
+          console.log(res)
         }
       })
-    } 
+    }
     setTimeout(show, 1000)
   },
 
 
-  kan:function(e){
+  kan: function(e) {
     wx.navigateTo({
-      url: '/pages/kan/user?openid='+e.currentTarget.dataset.openid,
+      url: '/pages/kan/user?openid=' + e.currentTarget.dataset.openid,
     })
   },
-  go:function(e){
-    var id=e.currentTarget.dataset.id
+  go: function(e) {
+    var id = e.currentTarget.dataset.id
     wx.navigateTo({
-      url: '/pages/index/view?id='+id,
+      url: '/pages/index/view?id=' + id,
     })
   },
-  fa:function(){
+  fa: function() {
     wx.navigateTo({
       url: '/pages/index/fa',
     })
   },
-  my:function(){
+  my: function() {
     wx.navigateTo({
       url: '/pages/index/my',
     })
   },
-  user: function () {
+  user: function() {
     wx.navigateTo({
       url: '/pages/index/user',
     })
   },
   getUserInfo: function(e) {
-   
+
     app.globalData.userInfo = e.detail.userInfo
     this.setData({
       userInfo: e.detail.userInfo,
       hasUserInfo: true
     })
-    
+
   },
-  onShow:function(){
-    this.onLoad();
-  }
+  onPullDownRefresh() {
+    var that = this
+    wx.request({
+      url: getApp().globalData.url + 'index/tiezi?cha=1',
+      success: function(res) {
+        that.setData({
+          list: res.data
+        })
+      }
+    })
+
+
+  },
 })
