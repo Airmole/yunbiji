@@ -9,6 +9,7 @@
     "pages/kan/user",
     "pages/index/my",
     "pages/my/view",
+    "pages/my/book",
     "pages/index/tuijian"
   ],
   "plugins": {
@@ -36,8 +37,8 @@
         "text": "首页"
       },
       {
-        "selectedIconPath": "pages/images/2.png",
-        "iconPath": "pages/images/2.png",
+        "selectedIconPath": "pages/images/3.png",
+        "iconPath": "pages/images/3.png",
         "pagePath": "pages/index/my",
         "text": "我的笔记"
       },
@@ -48,8 +49,8 @@
         "text": "书摘"
       },
       {
-        "selectedIconPath": "pages/images/3.png",
-        "iconPath": "pages/images/3.png",
+        "selectedIconPath": "pages/images/note.png",
+        "iconPath": "pages/images/note.png",
         "pagePath": "pages/index/fa",
         "text": "随手一记"
       },

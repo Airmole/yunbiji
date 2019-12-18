@@ -1,16 +1,43 @@
 <!--index.wxml-->
-
-
-<view class='hot'> 
+<!-- <view class='hot'> 
 </view>
-
 <block wx:for='{{list}}'>
 <view class='tiao' bindtap='go' data-id="{{item.Id}}">
 <view>题目:{{item.title}}</view>     <view>时间:{{item.createtime}}</view>
-
 </view>
-
-
 </block>
-<view style='height:200rpx;width:100%'></view>
+<view style='height:200rpx;width:100%'></view> -->
 
+
+
+
+
+
+<view class="ykt-detail-wraper" style='margin-top:20rpx;'>
+  <view class="logo-sub">请先扫描书籍背面的的ISBN码</view>
+  <image class="logo" src="../images/isbn.png"></image>
+  <view class="page__bd page__bd_spacing" style='padding-bottom:15px;'>
+    <form bindsubmit="ISBNInput" class="login-form ">
+      <button class="login-btn" plain="true" bindtap='scan'>
+        <text>先点此扫描ISBN码</text>
+      </button>
+    </form>
+
+
+    <view class="cu-form-group marginbook">
+      <input placeholder="ISBN码"  value="{{isbnCode}}" bindinput="inputISBN"></input>
+    </view>
+    <view class="cu-form-group marginbook">
+      <input placeholder="输入标题" bindinput="title"></input>
+    </view>
+    <view class="cu-form-group margin-top marginbook">
+      <textarea placeholder="多行文本输入框" bindinput="content"></textarea>
+    </view>
+  </view>
+
+  <view class="flex" style="flex-direction: row;">
+    <view class="flex-sub">
+      <button class="cu-btn bg-green margin-tb-sm lg" style="width:100%;border-radius:25px;" bindtap='publish'>发帖</button>
+    </view>
+  </view>
+</view>

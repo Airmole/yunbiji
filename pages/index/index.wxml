@@ -42,14 +42,28 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-<view style='height:200rpx;width:100%'></view>
+<view class="cu-bar bg-white solid-bottom margin-top">
+  <view class="action">
+    <text class="cuIcon-title text-orange "></text> 书摘
+  </view>
+</view>
+<view class="cu-list menu">
+  <block wx:if="{{booklist.length>0}}">
+    <block wx:for="{{booklist}}">
+      <view class="cu-item"  data-isbn="{{item.isbn}}" data-id="{{item.Id}}" bindtap="goBook">
+        <view class="content">
+          <text class="cuIcon-comment text-blue margin-right-xs"></text>
+          <text class="text-grey">{{item.title}}</text>
+        </view>
+      </view>
+    </block>
+  </block>
+  <block wx:else>
+    <view class="cu-item">
+      <view class="content">
+        <text class="text-grey"></text>
+        <text class="text-grey">暂无书摘</text>
+      </view>
+    </view>
+  </block>
+</view>

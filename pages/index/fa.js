@@ -106,7 +106,7 @@ Page({
     else{
       wx.showToast({
         title: '提交失败',
-        icon:'error'
+        image:'../images/error.png'
       })
     }
 

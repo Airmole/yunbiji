@@ -4,7 +4,7 @@
 		"ignore": []
 	},
 	"setting": {
-		"urlCheck": true,
+		"urlCheck": false,
 		"es6": true,
 		"postcss": true,
 		"minified": true,
@@ -49,14 +49,19 @@
 			"currentL": -1,
 			"list": []
 		},
+		"gamePlugin": {
+			"current": -1,
+			"list": []
+		},
 		"miniprogram": {
 			"current": 2,
 			"list": [
 				{
 					"id": 0,
-					"name": "id",
-					"pathName": "pages/index/caigou",
-					"query": "id=124"
+					"name": "pages/index/tuijian",
+					"pathName": "pages/index/tuijian",
+					"query": "id=124",
+					"scene": null
 				},
 				{
 					"id": -1,

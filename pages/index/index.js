@@ -7,7 +7,8 @@ Page({
     motto: 'Hello World',
     userInfo: {},
     hasUserInfo: false,
-    canIUse: wx.canIUse('button.open-type.getUserInfo')
+    canIUse: wx.canIUse('button.open-type.getUserInfo'),
+    booklist: [],
   },
 
   biaoti: function(e) {
@@ -120,7 +121,9 @@ Page({
         }
       })
     }
-    setTimeout(show, 1000)
+    setTimeout(show, 1000);
+
+    this.getBooklist();
   },
 
 
@@ -168,8 +171,26 @@ Page({
           list: res.data
         })
       }
-    })
-
-
+    });
+    that.getBooklist();
   },
+  getBooklist: function() {
+    var that = this;
+    wx.request({
+      url: app.globalData.root + '/zq/getBookComment.php',
+      method: 'GET',
+      success: function(res) {
+        if (res.data.length > 0) {
+          that.setData({
+            booklist: res.data
+          })
+        }
+      }
+    })
+  },
+  goBook: function(e) {
+    wx.navigateTo({
+      url: '/pages/my/book?isbn=' + e.currentTarget.dataset.isbn + '&id=' + e.currentTarget.dataset.id,
+    })
+  }
 })

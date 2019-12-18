@@ -37,6 +37,6 @@
     <button class="cu-btn bg-cyan margin-tb-sm lg" style="width:100%;" bindtap='choice'>插入图片</button>
   </view>
   <view class="flex-sub padding-sm margin-xs radius">
-    <button class="cu-btn bg-green margin-tb-sm lg" style="width:100%;" bindtap='fatie'>发帖</button>
+    <button class="cu-btn bg-green margin-tb-sm lg" style="width:100%;" bindtap='fatie'>发布</button>
   </view>
 </view>
