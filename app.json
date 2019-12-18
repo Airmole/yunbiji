@@ -28,7 +28,6 @@
     "color": "#a9b7b7",
     "selectedColor": "#11cd6e",
     "borderStyle": "white",
-    "font-size": "120rpx",
     "list": [
       {
         "selectedIconPath": "pages/images/1.png",

@@ -24,7 +24,7 @@
 
 
 <view class="cu-list menu">
-  <view class="cu-item" wx:for='{{list}}' bindtap='go' data-id="{{item.Id}}">
+  <view class="cu-item" wx:for='{{list}}' bindtap='go' data-id="{{item.Id}}" wx:key="key">
     <view class="content padding-tb-sm">
       <view>
         <text class="cuIcon-comment text-blue margin-right-xs"></text> {{item.title}}</view>
@@ -49,7 +49,7 @@
 </view>
 <view class="cu-list menu">
   <block wx:if="{{booklist.length>0}}">
-    <block wx:for="{{booklist}}">
+    <block wx:for="{{booklist}}" wx:key="key">
       <view class="cu-item"  data-isbn="{{item.isbn}}" data-id="{{item.Id}}" bindtap="goBook">
         <view class="content">
           <text class="cuIcon-comment text-blue margin-right-xs"></text>
