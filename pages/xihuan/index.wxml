@@ -11,11 +11,23 @@
 <include src="footer.wxml" /> -->
 
 
-
-
-<view class="cu-list menu">
+<view class="cu-list menu" wx:if="{{ifrom=='trash'}}">
   <block wx:for='{{list}}'>
-    <view class="cu-item arrow"  data-id='{{item.Id}}' bindtap='go'>
+    <view class="cu-item arrow"  data-isbn="{{item.isbn}}" data-id="{{item.Id}}" bindtap="goBook">
+      <view class="content">
+        <text class="cuIcon-delete text-red"></text>
+        <text class="text-grey">{{item.title}}</text>
+      </view>
+      <view class="action">
+        <text class="text-grey">已删除</text>
+      </view>
+    </view>
+  </block>
+</view>
+
+<view class="cu-list menu" wx:else>
+  <block wx:for='{{list}}'>
+    <view class="cu-item arrow" data-id='{{item.Id}}' bindtap='go'>
       <view class="content">
         <text class="cuIcon-likefill text-red"></text>
         <text class="text-grey">{{item.title}}</text>

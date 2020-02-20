@@ -77,7 +77,12 @@ Component({
     },
     xihuan: function() {
       wx.navigateTo({
-        url: '/pages/xihuan/index',
+        url: '/pages/xihuan/index?ifrom=like',
+      })
+    },
+    trash: function() {
+      wx.navigateTo({
+        url: '/pages/xihuan/index?ifrom=trash',
       })
     },
   },
