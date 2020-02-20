@@ -12,10 +12,10 @@
         <text class="other-meta">出版社：{{doubanStr.publisher}}</text>
         <text class="other-meta">出版日期：{{doubanStr.pubdate}}</text>
       </view>
-      <view class="range" wx:if="{{doubanStr.rating.average}}">
+      <!-- <view class="range" wx:if="{{doubanStr.rating.average}}">
         <text class="score">{{doubanStr.rating.average}}</text>
         <text class="viewers">{{doubanStr.rating.numRaters}}参与</text>
-      </view>
+      </view> -->
     </view>
 
     <view class="book-intro weui-panel raduis" wx:if="{{booklist.length>0}}">

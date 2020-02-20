@@ -16,7 +16,10 @@
     <view class="cu-list menu">
       <view class="cu-item">
         <view class="content flex-sub">
-          <view>标题：{{list.title}}【作者:{{list.nick}}】</view>
+          <view>标题：{{list.title}}</view>
+          <view class="text-gray text-sm flex justify-between">
+            作者:{{list.nick}}
+          </view>
           <view class="text-gray text-sm flex justify-between">
             tag:{{list.tag}}
           </view>

@@ -156,6 +156,7 @@ Page({
     })
   },
   publish: function() {
+    var that = this;
     var title = this.data.title;
     var content = this.data.content;
     var isbn = this.data.isbnCode;
@@ -181,7 +182,11 @@ Page({
             title: '发表成功',
             icon: 'success'
           })
-
+          that.setData({
+            title: '',
+            content: '',
+            isbnCode: '',
+          })
         } else {
           wx.showToast({
             title: '提交失败',

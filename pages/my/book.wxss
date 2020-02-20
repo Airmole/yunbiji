@@ -1,6 +1,5 @@
 /* pages/my/book.wxss */
 
-
 page {
   background: #eee;
 }
@@ -14,9 +13,10 @@ page {
 }
 
 .cover-container {
-  background: #7acfa6;
+  /* background-image: linear-gradient(135deg, #79f1a4 10%, #0e5cad 100%); */
   text-align: center;
   padding: 50rpx 0;
+  width: 300rpx;
 }
 
 .cover-container image {
@@ -26,10 +26,15 @@ page {
 }
 
 .book-meta {
-  position: relative;
-  padding: 20rpx;
-  padding-bottom: 40rpx;
+  position: absolute;
+  /* padding: 10rpx; */
+  padding-bottom: 10rpx;
   overflow: hidden;
+  /*  */
+  width: 220px;
+  top: 20rpx;
+  right: 0rpx;
+  padding-top: 10rpx;
 }
 
 .sharerange {
@@ -53,7 +58,8 @@ page {
 }
 
 .book-meta .meta-info {
-  margin-right: 200rpx;
+   width: 220px;
+  /* margin-right: 200rpx; */
 }
 
 .meta-info text {

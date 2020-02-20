@@ -14,15 +14,17 @@
 </view> -->
 
 
-<view class='hot'>
-</view>
 <view class="userinfo">
   <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取授权 </button>
   <block wx:else>
   </block>
 </view>
 
-
+<view class="cu-bar bg-white solid-bottom margin-top">
+  <view class="action">
+    <text class="cuIcon-title text-orange "></text> 笔记
+  </view>
+</view>
 <view class="cu-list menu">
   <view class="cu-item" wx:for='{{list}}' bindtap='go' data-id="{{item.Id}}" wx:key="key">
     <view class="content padding-tb-sm">
@@ -50,7 +52,7 @@
 <view class="cu-list menu">
   <block wx:if="{{booklist.length>0}}">
     <block wx:for="{{booklist}}" wx:key="key">
-      <view class="cu-item"  data-isbn="{{item.isbn}}" data-id="{{item.Id}}" bindtap="goBook">
+      <view class="cu-item" data-isbn="{{item.isbn}}" data-id="{{item.Id}}" bindtap="goBook">
         <view class="content">
           <text class="cuIcon-comment text-blue margin-right-xs"></text>
           <text class="text-grey">{{item.title}}</text>
