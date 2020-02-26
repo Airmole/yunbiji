@@ -62,4 +62,27 @@ Page({
     })
 
   },
+  recovery: function (e) {
+    var that = this;
+    wx.request({
+      url: app.globalData.root + '/zq/recoveryBookById.php?id=' + that.data.thisid,
+      method: 'GET',
+      success: function (res) {
+        if (res.data.result) {
+          wx.showToast({
+            icon: 'success',
+            title: '恢复成功',
+          })
+          wx.switchTab({
+            url: '/pages/index/index'
+          })
+        } else {
+          wx.showToast({
+            icon: 'none',
+            title: '恢复失败',
+          })
+        }
+      }
+    })
+  },
 });

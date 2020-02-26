@@ -6,6 +6,7 @@ Component({
     starCount: 0,
     forksCount: 0,
     visitTotal: 0,
+    email: false
   },
   attached() {
     console.log("success")
@@ -15,27 +16,37 @@ Component({
       mask: true,
     })
     let i = 0;
-    numDH();
-
-    function numDH() {
-      if (i < 20) {
-        setTimeout(function() {
-          that.setData({
-            starCount: i,
-            forksCount: i,
-            visitTotal: i
-          })
-          i++
-          numDH();
-        }, 20)
-      } else {
+    try {
+      var email = wx.getStorageSync('email')
+      if (email) {
         that.setData({
-          starCount: that.coutNum(3000),
-          forksCount: that.coutNum(484),
-          visitTotal: that.coutNum(24000)
+          email: email
         })
       }
+    } catch (e) {
+      console.log('未获取到邮箱缓存')
     }
+    // numDH();
+
+    // function numDH() {
+    //   if (i < 20) {
+    //     setTimeout(function() {
+    //       that.setData({
+    //         starCount: i,
+    //         forksCount: i,
+    //         visitTotal: i
+    //       })
+    //       i++
+    //       numDH();
+    //     }, 20)
+    //   } else {
+    //     that.setData({
+    //       starCount: that.coutNum(3000),
+    //       forksCount: that.coutNum(484),
+    //       visitTotal: that.coutNum(24000)
+    //     })
+    //   }
+    // }
     wx.hideLoading()
   },
   methods: {
@@ -85,5 +96,26 @@ Component({
         url: '/pages/xihuan/index?ifrom=trash',
       })
     },
+    emailModal: function(e) {
+      this.setData({
+        modalName: e.currentTarget.dataset.target
+      })
+    },
+    bindEmail: function(e) {
+      var that = this;
+      console.log(e.detail.value.email);
+      try {
+        wx.setStorageSync('email', e.detail.value.email);
+        this.setData({
+          email: e.detail.value.email
+        })
+        wx.showToast({
+          icon:'success',
+          title: '绑定成功',
+        })
+        that.hideModal();
+      } catch (e) {}
+
+    }
   },
 })

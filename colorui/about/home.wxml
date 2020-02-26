@@ -54,7 +54,8 @@
         <text class="text-grey">邮箱</text>
       </view>
       <view class="action">
-        <text class="line-red">未绑定</text>
+        <text class="line-black" wx:if="{{email}}">{{email}}</text>
+        <text class="line-red" bindtap="emailModal" data-target="DialogModal1" wx:else>未绑定</text>
       </view>
     </view>
 
@@ -73,6 +74,31 @@
       <view class="action">
         <text class="line-green">已绑定</text>
       </view>
+    </view>
+
+    <view class="cu-modal {{modalName=='DialogModal1'?'show':''}}">
+      <form bindsubmit="bindEmail">
+        <view class="cu-dialog">
+          <view class="cu-bar bg-white justify-end">
+            <view class="content">绑定邮箱</view>
+            <view class="action" bindtap="hideModal">
+              <text class="cuIcon-close text-red"></text>
+            </view>
+          </view>
+          <view class="padding-xl">
+            <view class="cu-form-group margin-top">
+              <view class="title">邮箱</view>
+              <input name="email" placeholder="电子邮箱地址"></input>
+            </view>
+          </view>
+          <view class="cu-bar bg-white justify-end">
+            <view class="action">
+              <button class="cu-btn line-green text-green" bindtap="hideModal">取消</button>
+              <button class="cu-btn bg-green margin-left" form-type="submit">确定</button>
+            </view>
+          </view>
+        </view>
+      </form>
     </view>
 
 

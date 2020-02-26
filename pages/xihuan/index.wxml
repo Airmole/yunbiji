@@ -19,7 +19,7 @@
         <text class="text-grey">{{item.title}}</text>
       </view>
       <view class="action">
-        <text class="text-grey">已删除</text>
+        <text class="text-grey">{{leftDaysArray[index]}}天后彻底删除</text>
       </view>
     </view>
   </block>

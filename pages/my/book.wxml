@@ -32,5 +32,11 @@
         <text class="cuIcon-delete"></text> 删除</button>
     </view>
   </view>
+  <view class="flex" style="flex-direction: row;" wx:else>
+    <view class="flex-sub">
+      <button class="cu-btn bg-green margin-tb-sm lg" style="width:100%;border-radius:25px;" bindtap='recovery'>
+        恢复</button>
+    </view>
+  </view>
 
 </page>
